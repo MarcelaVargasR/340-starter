@@ -20,8 +20,8 @@ app.use(expressLayouts); // Step 3: Tell Express to use express-ejs-layouts
 app.set("layout", "./layouts/layout"); // Step 4: Set default layout file path
 
 // Index route
-app.get("/", function (req, res) {
-  res.render("index", { title: "Home" });
+app.get("/", (req, res) => {
+  res.send("index", { title: "Home" });
 });
 
 /* ***********************
