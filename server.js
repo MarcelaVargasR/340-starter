@@ -20,7 +20,7 @@ app.use(expressLayouts); // Step 3: Tell Express to use express-ejs-layouts
 app.set("layout", "./layouts/layout"); // Step 4: Set default layout file path
 
 /* ***********************
- * Routes MOVI ESTO ARRIBA DE INDEX ROUTE, DEBERIA IR ABAJO
+ * Routes - moved this above index route. Should be underneath
  *************************/
 app.use(static);
 
