@@ -19,15 +19,17 @@ app.set("view engine", "ejs"); // Step 2: Tell Express to use EJS instead .html
 app.use(expressLayouts); // Step 3: Tell Express to use express-ejs-layouts
 app.set("layout", "./layouts/layout"); // Step 4: Set default layout file path
 
-// Index route
-app.get("/", (req, res) => {
-  res.send("index", { title: "Home" });
-});
-
 /* ***********************
- * Routes
+ * Routes MOVI ESTO ARRIBA DE INDEX ROUTE, DEBERIA IR ABAJO
  *************************/
 app.use(static);
+
+
+// Index route
+app.get("/", (req, res) => {
+  res.render("index", { title: "Home" });
+});
+
 
 /* ***********************
  * Local Server Information
